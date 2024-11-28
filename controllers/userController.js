@@ -677,7 +677,7 @@ const changePassword = asyncHandler(async (req, res) => {
 });
 const loginWithGoogle = asyncHandler(async (req, res) => {
   const { userToken } = req.body;
-
+  console.log(userToken)
   const ticket = await client.verifyIdToken({
     idToken: userToken,
     audience: process.env.GOOGLE_CLIENT_ID,
